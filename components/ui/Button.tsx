@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants = tv({
-    base: "font-medium bg-blue-500 text-white rounded-full active:opacity-80",
+    base: "font-medium bg-blue-500 text-white rounded-lg active:opacity-80",
     variants: {
         variant: {
             primary: "bg-blue-500 text-white",
@@ -26,6 +26,10 @@ const variants = tv({
             size: ["sm", "md"],
             class: "px-3 py-1",
         },
+        {
+            variant: ["primary", "secondary", "tertiary"],
+            class: "hover:opacity-80 transition-opacity",
+        }
     ],
     defaultVariants: {
         size: "md",
